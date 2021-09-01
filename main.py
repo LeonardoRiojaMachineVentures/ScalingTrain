@@ -4,6 +4,7 @@ import numpy as np
 def gen_matrix(var,cons):
 	#[[0]*(cons+1)]*(var + cons + 2)
     tab = np.zeros((cons+1, var+cons+2))
+    print("generated")
     return tab
 
 # checks the furthest right column for negative values ABOVE the last row. If negative values exist, another pivot is required.
@@ -277,6 +278,7 @@ def maxz(table, output='summary'):
 
 # solves minimization problems for optimal solution, returns dictionary w/ keys x1,x2...xn and min.
 def minz(table, output='summary'):
+    print("entered min")
     table = convert_min(table)
 
     while next_round_r(table)==True:
