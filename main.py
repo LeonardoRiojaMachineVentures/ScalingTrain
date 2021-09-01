@@ -292,6 +292,7 @@ def minz(table, output='summary'):
     i = 0
     val = {}
     for i in range(var):
+        print("doing something")
         col = table[:,i]
         s = sum(col)
         m = max(col)
